@@ -12,6 +12,11 @@ Scripts that allow easy configuration of new raspberry pi test systems. Primary 
 # THESE SCRIPTS ARE FOR TEST/DEVELOPMENT USE ONLY
 Note, these scripts contain a hardcoded password which is used for the setup samba shared folder. This is a major security hole. These scripts are purely for configuring test and development systems that are hosted on internal networks.
 
+## Presumed setup, additional resources
+SSH and WIFI configuration is not handled by this script. To setup SSH just place a text file called "ssh" in /boot/ and SSH will be enabled on next boot. https://www.raspberrypi.org/blog/a-security-update-for-raspbian-pixel/
+
+Wifi can be configured by placing a WPA_Supplicant.conf file in /boot/. https://www.raspberrypi.org/blog/another-update-raspbian/
+
 ## Usage
 These scripts are designed to provide a quick set of questions and then perform long running actions such as installing libraries, setting up shares, etc.
 
