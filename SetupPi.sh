@@ -2,7 +2,7 @@
 
 usage() {
     echo "Raspberry Pi setup script. Run without parameters for interactive usage";
-    echo "-s\t\tRun the setup script silently, provided all answers are provided"
+    echo "-s\t\tRun the setup script silently. Must provide hostname"
     echo "-f\t\tSetup for Formula Pi"
     echo "-h NewHostName\tThe new hostname for this system"
     echo "-a\t\tAutomatically login on boot (default)"
