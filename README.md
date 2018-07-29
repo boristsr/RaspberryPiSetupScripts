@@ -1,5 +1,13 @@
 # RaspberryPiSetupScripts
-Scripts that allow easy configuration of new raspberry pi test systems.
+Scripts that allow easy configuration of new raspberry pi test systems. Primary configurations allowed are:
+* Change hostname
+* Choose boot up mode (CLI/GUI, auto login)
+* Setup a samba share called PiShare, sharing the folder /home/pi/pishare
+* Setup VNC access
+* Provide some helper scripts to start virtual desktop, etc for VNC
+* Setup FormulaPi
+* Update system
+* Auto resize partition
 
 # THESE SCRIPTS ARE FOR TEST/DEVELOPMENT USE ONLY
 Note, these scripts contain a hardcoded password which is used for the setup samba shared folder. This is a major security hole. These scripts are purely for configuring test and development systems that are hosted on internal networks.
