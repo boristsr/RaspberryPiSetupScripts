@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install samba
+apt-get -y install samba
 
 mkdir /home/pi/share
 chown -R pi:pi /home/pi/share

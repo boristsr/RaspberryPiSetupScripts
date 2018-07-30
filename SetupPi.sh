@@ -117,11 +117,6 @@ else
     fi
 fi
 
-echo Bootmode: $bootMode
-echo raspi-config nonint do_boot_behaviour B$bootMode
-
-exit
-
 # do hostname config
 #https://github.com/davidferguson/pibakery/blob/master/pibakery-blocks/sethostname/sethostname.sh
 raspi-config nonint do_hostname "$newHostname"
@@ -135,7 +130,7 @@ raspi-config nonint do_expand_rootfs
 #setup apt
 apt-get update
 #upgrade and distupgrade
-apt-get dist-upgrade
+apt-get -y --force-yes -qq dist-upgrade
 
 #enable vnc
 raspi-config nonint do_vnc 1
