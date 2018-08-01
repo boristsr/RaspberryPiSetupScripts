@@ -124,25 +124,37 @@ hostname -b "$newHostname"
 systemctl restart avahi-daemon
 
 #expand filesystem
+#should automatically happen with raspbian, so disabled for now
 #https://raspberrypi.stackexchange.com/questions/28907/how-could-one-automate-the-raspbian-raspi-config-setup
-raspi-config nonint do_expand_rootfs
+#raspi-config nonint do_expand_rootfs
 
+echo Updating Apt
 #setup apt
 apt-get update
+
+echo Performing dist-upgrade
 #upgrade and distupgrade
 apt-get -y --force-yes -qq dist-upgrade
 
 #enable vnc
 raspi-config nonint do_vnc 1
+echo VNC enabled
+
+#enable vnc
+raspi-config nonint do_ssh 1
+echo SSH enabled
 
 raspi-config nonint do_boot_behaviour B$bootMode
+echo Bootmode configured to B$bootMode
 
 #setup samba
 sh SetupSamba.sh
+echo Samba configured with development share
 
 if [ "$setupFormulaPi" = "true" ]
 then
     sh SetupFormulaPi-S2018.sh
+    echo FormulaPi configured
 fi
 
 echo ========================================
