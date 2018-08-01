@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 
 usage() {
     echo "Raspberry Pi setup script. Run without parameters for interactive usage";
@@ -157,6 +158,8 @@ then
     sh SetupFormulaPi-S2018.sh
     echo FormulaPi configured
 fi
+
+sh SetupLocale.sh
 
 echo ========================================
 echo Done!
