@@ -7,9 +7,9 @@ apt-get -y install python-picamera
 apt-get -y install libcv-dev libopencv-dev python-opencv
 
 #enable I2C
-raspi-config nonint do_i2c 1
+raspi-config nonint do_i2c 0
 #enable pi camera
-raspi-config nonint do_camera 1
+raspi-config nonint do_camera 0
 
 mkdir /home/pi/formulapi
 chown -R pi:pi /home/pi/formulapi

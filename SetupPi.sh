@@ -139,11 +139,11 @@ apt-get -y --force-yes dist-upgrade
 echo Dist-upgrade complete
 
 #enable vnc
-raspi-config nonint do_vnc 1
+raspi-config nonint do_vnc 0
 echo VNC enabled
 
 #enable vnc
-raspi-config nonint do_ssh 1
+raspi-config nonint do_ssh 0
 echo SSH enabled
 
 raspi-config nonint do_boot_behaviour B$bootMode
