@@ -134,7 +134,8 @@ apt-get update
 
 echo Performing dist-upgrade
 #upgrade and distupgrade
-apt-get -y --force-yes -qq dist-upgrade
+apt-get -y --force-yes dist-upgrade
+echo Dist-upgrade complete
 
 #enable vnc
 raspi-config nonint do_vnc 1
