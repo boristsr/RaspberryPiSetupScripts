@@ -150,12 +150,12 @@ raspi-config nonint do_boot_behaviour B$bootMode
 echo Bootmode configured to B$bootMode
 
 #setup samba
-sh SetupSamba.sh
+bash SetupSamba.sh
 echo Samba configured with development share
 
 if [ "$setupFormulaPi" = "true" ]
 then
-    sh SetupFormulaPi-S2018.sh
+    bash SetupFormulaPi-S2018.sh
     echo FormulaPi configured
 fi
 
